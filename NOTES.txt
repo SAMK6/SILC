@@ -5,3 +5,19 @@ Books
 - Compiler Design: Wilhelm and Maurer
 - Crafting a Compiler: Fischer, Cytron, and LeBlanc
 - Introduction to Compiling Techniques: Bennett
+
+
+Features wishlist
+- compiled language
+- types
+  - in (integer)
+  - ch (character)
+- keywords
+  -
+- variables
+  -
+- tokens
+  - '+' addition
+  - '-' subtrction
+  - '
+- 
