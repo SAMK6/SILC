@@ -1,23 +1,69 @@
-################################ NOTES #####################################
+################################## NOTES #####################################
 
 
-Books
+Resources
 - Compiler Design: Wilhelm and Maurer
 - Crafting a Compiler: Fischer, Cytron, and LeBlanc
 - Introduction to Compiling Techniques: Bennett
+- https://web.stanford.edu/class/archive/cs/cs103/cs103.1156/tools/cfg/ context free grammar checker
 
 
 Features wishlist
+- named SILC "Sam and Isaac Like C"
 - compiled language
 - types
-  - in (integer)
-  - ch (character)
-- keywords
-  -
+  - integer (8 bytes, signed)
+  - character (1 byte, unsigned)
+- keywords (strictly reserved words)
+  - in "integer"
+  - ch "character"
+  - pr "print"
+  - cm "compare" (tentative low priority)
+  - br "branch" (tentative low priority)
+  - + add
+  - - subract
+  - ^ binary and
+  - * binary or
+  - ~ binary not
+  - = assignment
+  - ; end of statement
 - variables
-  -
-- tokens
+  - [a-z|A-Z|0-9|_]+ no more than 16 characters
+  
+GRAMMAR
+- terminals
   - '+' addition
   - '-' subtrction
-  - '
-- 
+  - '^' and
+  - '|' or
+  - '~' not
+  - '=' assignment
+  - 'in' int
+  - 'ch' char
+  - 'pr' print
+  - 'id' names
+  - 'intL' int literals 
+  - 'charL' character literals
+  - 'space' blank space
+  - ';' end of stement
+  - '$' end of program
+- non-terminals
+  - 'PROG = S' program
+  - 'LINE = l' line
+  - 'LINES = L' lines
+  - 'STM = s' statement
+  - 'DEC = d' declaration
+  - 'VAL = V' value
+  - 'EXP = E' expression
+  - 'TYPE = t' type
+  - 'OP = o' operator
+- productions
+  1 PROG -> LINE LINES $
+  2 LINES -> LINE LINES | e
+  3 LINE -> STM | DEC
+  4 DEC -> TYPE id;
+  5 STM -> id = VAL EXP; | pr id;
+  6 TYPE -> in | ch;
+  7 EXP -> OP VAL EXP; | e
+  8 OP -> + | - | ^ | *
+  9 VAL -> id | intL | charL | ~ VAL
