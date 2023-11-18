@@ -1,1 +1,7 @@
 ################################ NOTES #####################################
+
+
+Books
+- Compiler Design: Wilhelm and Maurer
+- Crafting a Compiler: Fischer, Cytron, and LeBlanc
+- Introduction to Compiling Techniques: Bennett
