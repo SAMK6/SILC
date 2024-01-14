@@ -1,9 +1,17 @@
 ################################## NOTES #####################################
 
 
+General Notes
+- We're gonna write most stuff in c++
+
 Resources
 - Compiler Design: Wilhelm and Maurer
 - Crafting a Compiler: Fischer, Cytron, and LeBlanc
 - Introduction to Compiling Techniques: Bennett
 - The Theory and Practice of Compiler Writing:Tremblay, Sorenson
 - https://web.stanford.edu/class/archive/cs/cs103/cs103.1156/tools/cfg/ context free grammar checker
+
+
+
+TODO next
+- start writing the scanner

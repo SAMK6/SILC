@@ -1,6 +1,7 @@
 Features wishlist
 - named SILC "Sam and Isaac Like C"
 - compiled language
+- SILC files have .silc extensions
 - types
   - integer (8 bytes, signed)
   - character (1 byte, unsigned)
@@ -13,6 +14,11 @@ Features wishlist
   - -
   - ^
   - *
-  - 
+  - ~
+  - =
+- misc
+  - lines end with ';' always
+  - white spaces is stripped during compilation
+  - declaration is always explicit so variables must be declared on a line before they're assigned
 - variables
-  - [a-z|A-Z|0-9|_]+ no more than 16 characters
+  - [a-z|A-Z|0-9|_]+ no more than 16 characters 
