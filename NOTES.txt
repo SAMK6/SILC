@@ -35,7 +35,7 @@ GRAMMAR
   - '+' addition
   - '-' subtrction
   - '^' and
-  - '|' or
+  - '*' or
   - '~' not
   - '=' assignment
   - 'in' int
@@ -47,6 +47,8 @@ GRAMMAR
   - 'space' blank space
   - ';' end of stement
   - '$' end of program
+  - '(' open bracket
+  - ')' close bracket
 - non-terminals
   - 'PROG = S' program
   - 'LINE = l' line
@@ -55,6 +57,7 @@ GRAMMAR
   - 'DEC = d' declaration
   - 'VAL = V' value
   - 'EXP = E' expression
+  - 'OPEXP = O' operatoer expression
   - 'TYPE = t' type
   - 'OP = o' operator
 - productions
@@ -62,8 +65,9 @@ GRAMMAR
   2 LINES -> LINE LINES | e
   3 LINE -> STM | DEC
   4 DEC -> TYPE id;
-  5 STM -> id = VAL EXP; | pr id;
-  6 TYPE -> in | ch;
-  7 EXP -> OP VAL EXP; | e
-  8 OP -> + | - | ^ | *
-  9 VAL -> id | intL | charL | ~ VAL
+  5 STM -> id = EXP; | pr id;
+  6 TYPE -> in | ch
+  7 EXP -> VAL OPEXP | (EXP) OPEXP
+  8 OPEXP -> OP EXP | e
+  9 OP -> + | - | ^ | *
+  10 VAL -> id | intL | charL | ~ VAL
