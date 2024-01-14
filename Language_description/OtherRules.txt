@@ -1,0 +1,18 @@
+Features wishlist
+- named SILC "Sam and Isaac Like C"
+- compiled language
+- types
+  - integer (8 bytes, signed)
+  - character (1 byte, unsigned)
+- keywords (strictly reserved words)
+  - in "integer"
+  - ch "character"
+  - pr "print"
+- operators
+  - +
+  - -
+  - ^
+  - *
+  - 
+- variables
+  - [a-z|A-Z|0-9|_]+ no more than 16 characters

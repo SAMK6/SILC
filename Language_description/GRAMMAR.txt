@@ -1,0 +1,41 @@
+GRAMMAR
+- terminals
+  - '+' addition
+  - '-' subtrction
+  - '^' and
+  - '*' or
+  - '~' not
+  - '=' assignment
+  - 'in' int identifier
+  - 'ch' char identifier
+  - 'pr' print command
+  - 'id' names
+  - 'intL' int literals 
+  - 'charL' character literals
+  - 'space' blank space
+  - ';' end of stement
+  - '$' end of program
+  - '(' open bracket
+  - ')' close bracket
+- non-terminals
+  - 'PROG = S' program
+  - 'LINE = l' line
+  - 'LINES = L' lines
+  - 'STM = s' statement
+  - 'DEC = d' declaration
+  - 'VAL = V' value
+  - 'EXP = E' expression
+  - 'OPEXP = O' operatoer expression
+  - 'TYPE = t' type
+  - 'OP = o' operator
+- productions
+  1 PROG -> LINE LINES $
+  2 LINES -> LINE LINES | e
+  3 LINE -> STM | DEC
+  4 DEC -> TYPE id;
+  5 STM -> id = EXP; | pr id;
+  6 TYPE -> in | ch
+  7 EXP -> VAL OPEXP | (EXP) OPEXP | ~EXP
+  8 OPEXP -> OP EXP | e
+  9 OP -> + | - | ^ | *
+  10 VAL -> id | intL | charL
