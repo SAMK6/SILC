@@ -67,7 +67,7 @@ GRAMMAR
   4 DEC -> TYPE id;
   5 STM -> id = EXP; | pr id;
   6 TYPE -> in | ch
-  7 EXP -> VAL OPEXP | (EXP) OPEXP
+  7 EXP -> VAL OPEXP | (EXP) OPEXP | ~EXP
   8 OPEXP -> OP EXP | e
   9 OP -> + | - | ^ | *
-  10 VAL -> id | intL | charL | ~ VAL
+  10 VAL -> id | intL | charL
